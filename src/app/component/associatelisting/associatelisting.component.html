@@ -1,0 +1,96 @@
+<mat-card style="min-height: 500px">
+  <mat-card-header>
+    <h1>Associate Listing</h1>
+    <button
+      (click)="functionAdd()"
+      mat-raised-button
+      color="primary"
+      style="margin-left: 70%"
+    >
+      Add Associate (+)
+    </button>
+  </mat-card-header>
+  <mat-card-content>
+    <table mat-table matSort [dataSource]="datasource" class="mat-elevation-z8">
+      <!-- Code -->
+      <ng-container matColumnDef="code">
+        <th mat-sort-header mat-header-cell *matHeaderCellDef>Code</th>
+        <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+      </ng-container>
+
+      <!-- Name -->
+      <ng-container matColumnDef="name">
+        <th mat-sort-header mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      </ng-container>
+
+      <!-- Name -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>Email</th>
+        <td mat-cell *matCellDef="let element">{{ element.email }}</td>
+      </ng-container>
+
+      <!-- Phone -->
+      <ng-container matColumnDef="phone">
+        <th mat-header-cell *matHeaderCellDef>Phone</th>
+        <td mat-cell *matCellDef="let element">{{ element.phone }}</td>
+      </ng-container>
+
+      <!-- Type -->
+      <ng-container matColumnDef="type">
+        <th mat-header-cell *matHeaderCellDef>Type</th>
+        <td mat-cell *matCellDef="let element">{{ element.type }}</td>
+      </ng-container>
+
+      <!-- Address -->
+      <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef>Address</th>
+        <td mat-cell *matCellDef="let element">{{ element.address }}</td>
+      </ng-container>
+
+      <!-- AssociateGroup -->
+      <ng-container matColumnDef="associategroup">
+        <th mat-header-cell *matHeaderCellDef>AssociateGroup</th>
+        <td mat-cell *matCellDef="let element">{{ element.associategroup }}</td>
+      </ng-container>
+
+      <!-- Status -->
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef>Status</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.status == true ? 'Active' : 'In Active' }}
+        </td>
+      </ng-container>
+
+      <!-- Action -->
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let element">
+          <button
+            (click)="functioEdit(element.id)"
+            mat-raised-button
+            color="primary"
+          >
+            Edit
+          </button>
+          <button
+            (click)="functioDelete(element.id)"
+            mat-raised-button
+            color="accent"
+          >
+            Delete
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </mat-card-content>
+  <mat-card-footer style="margin-top: 10px">
+    <mat-paginator
+      [pageSizeOptions]="[5, 10, 50]"
+      showFirstLastButtons="true"
+    ></mat-paginator>
+  </mat-card-footer>
+</mat-card>

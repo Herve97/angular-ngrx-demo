@@ -1,0 +1,64 @@
+{
+  "associate": [
+    {
+      "id": 1,
+      "name": "Hervé Diams1",
+      "email": "hervediams@gmail.com",
+      "phone": "243829057466",
+      "type": "CUSTOMER",
+      "address": "5 Miao - Kinshasa/Lemba",
+      "associategroup": "level1",
+      "status": true
+    },
+    {
+      "id": 2,
+      "name": "Hervé Diams2",
+      "email": "hervediams2@gmail.com",
+      "phone": "243829057466",
+      "type": "SUPPLIER",
+      "address": "5 Miao - Kinshasa/Lemba",
+      "associategroup": "level2",
+      "status": false
+    },
+    {
+      "id": 3,
+      "name": "Hervé Diams3",
+      "email": "hervediams3@gmail.com",
+      "phone": "243829057466",
+      "type": "CUSTOMER",
+      "address": "5 Miao - Kinshasa/Lemba",
+      "associategroup": "level3",
+      "status": true
+    },
+    {
+      "id": 5,
+      "name": "Hervé Diams5",
+      "email": "hervediams5@gmail.com",
+      "phone": "243829057466",
+      "type": "SUPPLIER",
+      "address": "5 Miao - Kinshasa/Lemba",
+      "associategroup": "level3",
+      "status": true
+    },
+    {
+      "id": 7,
+      "name": "Benitha Nsakala",
+      "email": "benithansakala@gmail.com",
+      "phone": "243895478726",
+      "type": "SUPPLIER",
+      "address": "5 Miao, Kinshasa-Lemba",
+      "associategroup": "level2",
+      "status": true
+    },
+    {
+      "id": 8,
+      "name": "Lancy Mangao",
+      "email": "l.mangao@gmail.com",
+      "phone": "243829057466",
+      "type": "CUSTOMER",
+      "address": "Kasumu",
+      "associategroup": "level3",
+      "status": false
+    }
+  ]
+}
